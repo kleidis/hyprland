@@ -1,5 +1,5 @@
 # EDITOR
-export EDITOR=code
+export EDITOR=cursor
 export VISUAL="$EDITOR"
 
 alias ls="eza --icons"

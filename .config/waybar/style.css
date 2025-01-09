@@ -1,5 +1,4 @@
-@import "mocha.css";
-
+@import '../../.cache/wal/colors-waybar.css';
 * { min-height: 15px; } 
 
 
@@ -22,14 +21,14 @@ window#waybar.hidden {
 
 tooltip {
     border-radius: 10px;
-    background-color: @foreground;
+    background-color: @background;
     opacity:0.8;
     padding:20px;
     margin:0px;
 }
 
 tooltip label {
-    color: @overlay1;
+    color: @foreground;
     font-weight:normal;
 }
 
@@ -43,7 +42,7 @@ window#waybar.chromium {
 }
 
 #workspaces {
-    background-color: @base;
+    background-color: @background;
     border-radius: 15px;
     color: @text;
 }
@@ -52,21 +51,21 @@ window#waybar.chromium {
     padding: 0px 5px;
     margin: 6px 5px;
     border-radius: 30px;
-    background-color: @color1;
+    background-color: @background;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    background: @overlay0;
-    color: @surface0;
+    background: @color1;
+    color: @background;
     border-radius: 10px;
     min-width: 30px;
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-    color: @surface1;
-    background: @overlay2;
+    color: @background;
+    background: @color1;
     border-radius: 15px;
 }
 
@@ -82,14 +81,16 @@ window#waybar.chromium {
 #settings,
 #workspaces,
 #mpd {
-    background-color: @base;
-    color: @text;
-    border: 2px solid alpha(@subtext2, 0.3);
+    background-color: @background;
+    color: @color1;
+    border: 0px solid alpha(@subtext2, 0.3);
     margin: 0px 5px;
-    border-radius: 13px;
+    border-radius: 16px;
 }
 
 #clock {
+    border-color: @color1;
+    color: @color12;
     margin: 6px 7px;
 }
 
@@ -101,10 +102,11 @@ window#waybar.chromium {
 
 #temperature {
     margin: 6px 5px;
+    color: @color3;
 }
 
 #custom-power {
-    color: @red;
+    color: @color6;
     border-radius: 26px;
     min-width:  50px
 }
@@ -119,23 +121,25 @@ window#waybar.chromium {
 
 
 #hardwarestats {
+    border-color: @color1;
+    color: @color11;
     padding: 0px 0px 0px 0px
 }
 
 #network {
-    color: @peach;
+    color: @color5;
 }
 
 #bluetooth {
-    color: @blue;
+    color: @color7;
 }
 
 #pulseaudio {
-    color: @mauve;
+    color: @color9;
 }
 
 #battery.charging, #battery.plugged {
-    color: @green;
+    color: @color3;
 }
 
 @keyframes blink {
